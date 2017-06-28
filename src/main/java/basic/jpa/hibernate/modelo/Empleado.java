@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
 
 /**
  *
@@ -15,8 +16,6 @@ import javax.persistence.Table;
 @Table(name = "empleado")
 public class Empleado implements Serializable {
     
-    private static final long serialVersionUID = 1L;
-    
     @Id
     @Column(name = "cod_empleado")
     private Long codigo;
@@ -25,6 +24,7 @@ public class Empleado implements Serializable {
     @Column(name = "nombres")
     private String nombres;
     @Column(name = "fecha_nac")
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechaNacimiento;
     
     public Empleado(){
