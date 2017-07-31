@@ -19,7 +19,7 @@ public class TestEmpleados {
     
     public static void main(String[] args){
         
-        emf = Persistence.createEntityManagerFactory("Persistencia");
+        emf = Persistence.createEntityManagerFactory("Oracle");
         
         manager = emf.createEntityManager();
         
