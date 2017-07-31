@@ -19,11 +19,11 @@ public class TestEmpleados {
     
     public static void main(String[] args){
         
-        emf = Persistence.createEntityManagerFactory("Oracle");
+        emf = Persistence.createEntityManagerFactory("Persistencia");
         
         manager = emf.createEntityManager();
         
-        Empleado e = new Empleado(25L, "Campos", "Youseli", new GregorianCalendar(1984, 7, 25).getTime());
+        Empleado e = new Empleado(15L, "Campos", "Youseli", new GregorianCalendar(1984, 7, 25).getTime());
         
         manager.getTransaction().begin();
         
@@ -32,6 +32,8 @@ public class TestEmpleados {
         manager.getTransaction().commit();
         
         imprimirTodo();
+        
+        emf.close();
         
     }
     
