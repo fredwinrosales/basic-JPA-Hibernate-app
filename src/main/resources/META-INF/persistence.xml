@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="Persistencia">
-    <class>basic.jpa.hibernate.modelo.Empleado</class>
+    <class>com.application.models.Empleado</class>
+    <class>com.application.models.User</class>
+    <class>com.application.models.Post</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test"/>
@@ -13,7 +15,7 @@
   </persistence-unit>
   <persistence-unit name="Oracle" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-    <class>basic.jpa.hibernate.modelo.Empleado</class>
+    <class>com.application.models.Empleado</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:49161:XE"/>
       <property name="javax.persistence.jdbc.user" value="frosales"/>

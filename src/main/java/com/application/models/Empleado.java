@@ -1,4 +1,4 @@
-package basic.jpa.hibernate.modelo;
+package com.application.models;
 
 import java.io.Serializable;
 import java.util.Date;
